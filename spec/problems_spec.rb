@@ -109,4 +109,41 @@ describe Array do
         # end
 
     end
+
 end
+
+
+describe Towers do 
+
+    describe "#initialize" do 
+        # initialize 2d array with 3 stacks 
+        # put 4 pieces in stack 1 in order
+        # runs start game method 
+
+        it 
+    end
+
+    describe '#move' do 
+
+    end
+
+    describe "#won?" do 
+        
+        it "stack_start == stack_finish"
+
+        it "gameover returns true"
+    end
+
+    describe '#run_game' do 
+
+        it "calls won? once"
+
+        it "calls get.chomp, prompts user for input"
+
+        it 'calls make_move on user input'
+    end
+
+
+end
+
+

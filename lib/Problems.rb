@@ -49,7 +49,7 @@ class Array
         else 
             pairs.key(pairs.values.max) #max_by{|k,v| v }
         end
-
     end
+    
 end
 
