@@ -107,6 +107,7 @@ describe Array do
         # it 'returns 2d array' do 
         #     expect(arr_6.stock_picker).to eq(arr_6)
         # end
+        #
 
     end
 
