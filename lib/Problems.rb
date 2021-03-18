@@ -32,4 +32,24 @@ class Array
         end
         return_arr
     end
-end`
+
+
+    def stock_picker
+        pairs = Hash.new { |h,k| h[k] = []}
+        self.each_with_index do |el1, idx1|
+            self.each_with_index do |el2, idx2|
+                if idx2 > idx1 && (el2 - el1) > 0
+                    diff = el2 - el1
+                    pairs[[idx1, idx2]] = diff
+                end
+            end
+        end
+        if pairs.empty? 
+            return []
+        else 
+            pairs.key(pairs.values.max) #max_by{|k,v| v }
+        end
+
+    end
+end
+

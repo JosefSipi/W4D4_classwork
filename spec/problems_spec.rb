@@ -82,5 +82,31 @@ describe Array do
         end
     end
 
+    # returns an array of two indices 
 
+    describe "#stock_picker" do
+        let(:arr_6) { [10,20,15, 30, 10] }
+        let(:arr_7) { [30, 25, 20, 15, 10] }
+
+        it "returns array of length 2" do
+            expect(arr_6.stock_picker.length).to eq(2)
+        end
+
+        it "returns most profitable pair" do
+            expect(arr_6.stock_picker).to eq([0, 3])
+        end
+
+        it "second day is larger than first day" do
+            expect(arr_6.stock_picker[1] > arr_6.stock_picker[0]).to be(true) 
+        end
+
+        it "returns [] if no pairs are profitable" do
+            expect(arr_7.stock_picker).to eq([])
+        end
+
+        # it 'returns 2d array' do 
+        #     expect(arr_6.stock_picker).to eq(arr_6)
+        # end
+
+    end
 end
