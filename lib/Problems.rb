@@ -22,4 +22,14 @@ class Array
         pairs
     end
     
-end
+    def my_transpose
+        return_arr = Array.new(self.length) { [] }
+        range = (0...self.length)
+        range.each do |idx1|
+            range.each do |idx2|
+                return_arr[idx1][idx2] = self[idx2][idx1]
+            end
+        end
+        return_arr
+    end
+end`
